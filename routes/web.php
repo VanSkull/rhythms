@@ -16,5 +16,7 @@ Route::get('/titres', [FirstController::class, 'titres']);
 
 Route::get('/search/{regex}', [FirstController::class, 'search']);
 
+Route::get('/addcontenu', [FirstController::class, 'contenu']);
+
 Auth::routes();
 

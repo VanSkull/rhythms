@@ -181,7 +181,7 @@
                         if($i == 10){
                     ?>
                     <div id="accueil-section-chanteurs-plus">
-                        <a id="accueil-section-chanteurs-plus-lien" href="#" >Voir tous les chanteurs</a>
+                        <a id="accueil-section-chanteurs-plus-lien" href="/chanteurs#all" >Voir tous les chanteurs</a>
                     </div>
                     <?php   
                         }                    
@@ -275,7 +275,7 @@
                         if($j == 10){
                     ?>
                     <div id="accueil-section-titres-plus">
-                        <a id="accueil-section-titres-plus-lien" href="#" >Voir tous les titres</a>
+                        <a id="accueil-section-titres-plus-lien" href="/titres#all" >Voir tous les titres</a>
                     </div>
                     <?php
                         }
@@ -357,7 +357,7 @@
                         </div>
                     </div>
                     <div id="accueil-section-favoris-plus">
-                        <a id="accueil-section-favoris-plus-lien" href="#" >Voir tous mes favoris</a>
+                        <a id="accueil-section-favoris-plus-lien" href="/favoris" >Voir tous mes favoris</a>
                     </div>
                 </div>
 @endsection

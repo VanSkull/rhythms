@@ -474,7 +474,110 @@ body{
 
 /* Contenu de la page des genres */
 
+#main-contenu #main-contain #genres-section #genres-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contenu #main-contain #chanteur-single-section #genres-section-chanteur{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: left;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-chanteur #lien-chanteur{
+    font-size: 30px;
+    text-decoration: none;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: auto;
+    border-radius: 0;
+    border: none;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-titre{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: #492F92;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .titre-arrow{
+    font-size: 50px;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-like a{
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 50px;
+    border-radius: 0;
+    border: none;
+}
+
+#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
+    background-color: transparent;
+}
+
 /* Contenu de la page des titres */
+
+#main-contenu #main-contain #chanteur-section #chanteur-section-all .titres{
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+}
+
+#main-contenu #main-contain #chanteur-section #chanteur-section-all .titres .titres-photo{
+    width: 40%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#main-contenu #main-contain #chanteur-section #chanteur-section-all .titres .titres-infos{
+    margin-left: 15px;
+}
+
+#main-contenu #main-contain #chanteur-section #chanteur-section-all .titres .titres-infos .titres-infos-nom{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#main-contenu #main-contain #chanteur-section #chanteur-section-all .titres .titres-infos .titres-infos-genre{
+    font-size: 28px;
+    font-weight: lighter;
+}
+
 
 /* Contenu de la page des favoris */
 #main-contenu #main-contain #favoris-section #favoris-section-title{
@@ -601,4 +704,215 @@ body{
 
 #main-contenu #music #music-lecteur #music-lecteur-boutons{
     margin-bottom: 10px;
+}
+
+
+/* Contenu de la page d'un chanteur spécifique */
+#main-contenu #main-contain #titres-section #titres-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-genre{
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: left;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-genre span{
+    text-decoration: underline;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-genre #lien-genre{
+    text-decoration: none;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: auto;
+    border-radius: 0;
+    border: none;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-titre{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: #492F92;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .titre-arrow{
+    font-size: 50px;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-like a{
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 50px;
+    border-radius: 0;
+    border: none;
+}
+
+#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
+    background-color: transparent;
+}
+
+/*Contenu connexion */
+#main-contenu #main-contain #connexion-section #connexion-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu{
+    width: 80%;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion input{
+    width: 100%;
+    font-size: 24pt;
+    padding: 10px 20px;
+    border: 2px #707070 solid;
+    border-radius: 27.5px;
+    margin: 15px 0;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion input::placeholder{
+    color: rgba(112, 112, 112, 0.5);
+    font-style: italic;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion #remember-champ{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion #remember-champ #remember{
+    width: auto;
+    transform: scale(1.5);
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion #remember-champ #remember:checked{
+    background-color: #492F92;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion #remember-champ label{
+    font-size: 18pt;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion input#connexion-button{
+    width: auto;
+    margin-left: auto;
+    font-size: 20pt;
+    font-weight: bold;
+    border-color: #492F92;
+    background-color: none;
+    transition: 0.3s ease-in-out;
+}
+
+#main-contenu #main-contain #connexion-section #connexion-section-contenu #formulaire-connexion input#connexion-button:hover{
+    background-color: #492F92;
+    color: #000000;
+}
+
+/*Contenu inscription*/
+#main-contenu #main-contain #inscription-section #inscription-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu{
+    width: 80%;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu #formulaire-inscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu #formulaire-inscription input{
+    width: 100%;
+    font-size: 24pt;
+    padding: 10px 20px;
+    border: 2px #707070 solid;
+    border-radius: 27.5px;
+    margin: 15px 0;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu #formulaire-inscription input::placeholder{
+    color: rgba(112, 112, 112, 0.5);
+    font-style: italic;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu #formulaire-inscription input#inscription-button{
+    width: auto;
+    margin-left: auto;
+    font-size: 20pt;
+    font-weight: bold;
+    border-color: #492F92;
+    background-color: none;
+    transition: 0.3s ease-in-out;
+}
+
+#main-contenu #main-contain #inscription-section #inscription-section-contenu #formulaire-inscription input#inscription-button:hover{
+    background-color: #492F92;
+    color: #000000;
+}
+
+/*Contenu du Nouveau contenu*/
+#main-contenu #main-contain #contenu-section #contenu-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
 }

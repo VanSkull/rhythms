@@ -19,7 +19,7 @@
     <body>
         <div id="side-menu">
             <div id="main-logo">
-                <a href="#"><img src="/img/logo_rhythms.png" alt="Logo_Rhythms" /></a>
+                <a href="/"><img src="/img/logo_rhythms.png" alt="Logo_Rhythms" /></a>
             </div>
             
             <div id="menu-separator"></div>
@@ -30,34 +30,41 @@
                         <li><a href="/">Accueil</a></li>
                         <li><a href="/genres">Genres</a>
                             <ul>
-                                <li><a href="#">Pop</a></li>
-                                <li><a href="#">Rock</a></li>
-                                <li><a href="#">Rap</a></li>
-                                <li><a href="#">Classique</a></li>
-                                <li><a href="#">Folk</a></li>
-                                <li><a href="#">Punk</a></li>
-                                <li><a href="#">Metal</a></li>
-                                <li><a href="#">Hip-Hop</a></li>
-                                <li><a href="#">RnB</a></li>
+                                <li><a href="/genres#pop">Pop</a></li>
+                                <li><a href="/genres#rock">Rock</a></li>
+                                <li><a href="/genres#rap">Rap</a></li>
+                                <li><a href="/genres#classique">Classique</a></li>
+                                <li><a href="/genres#folk">Folk</a></li>
+                                <li><a href="/genres#punk">Punk</a></li>
+                                <li><a href="/genres#metal">Metal</a></li>
+                                <li><a href="/genres#hiphop">Hip-Hop</a></li>
+                                <li><a href="/genres#rnb">RnB</a></li>
                             </ul>
                         </li>
                         <li><a href="/chanteurs">Chanteurs</a>
                             <ul>
-                                <li><a href="#">Nouveautées</a></li>
-                                <li><a href="#">Les plus populaires</a></li>
-                                <li><a href="#">Les mieux notés</a></li>
-                                <li><a href="#">Tous les chanteurs</a></li>
+                                <li><a href="/chanteurs#news">Nouveautées</a></li>
+                                <li><a href="/chanteurs#popular">Les plus populaires</a></li>
+                                <li><a href="/chanteurs#bestrated">Les mieux notés</a></li>
+                                <li><a href="/chanteurs#all">Tous les chanteurs</a></li>
                             </ul>
                         </li>
                         <li><a href="/titres">Titres</a>
                             <ul>
-                                <li><a href="#">Nouveautées</a></li>
-                                <li><a href="#">Les plus populaires</a></li>
-                                <li><a href="#">Les mieux notés</a></li>
-                                <li><a href="#">Tous les titres</a></li>
+                                <li><a href="/titres#news">Nouveautées</a></li>
+                                <li><a href="/titres#popular">Les plus populaires</a></li>
+                                <li><a href="/titres#bestrated">Les mieux notés</a></li>
+                                <li><a href="/titres#all">Tous les titres</a></li>
                             </ul>
                         </li>
                         <li><a href="/favoris">Favoris</a></li>
+                        @guest
+                            <!-- Rien à voir -->
+                        @else
+                        @if(Auth::user()->admin == true)
+                        <li><a href="/addcontenu">Ajouter</a></li>
+                        @endif
+                        @endguest
                     </ul>
                 </nav>
             </div>

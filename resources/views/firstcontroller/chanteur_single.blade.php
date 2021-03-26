@@ -1,5 +1,43 @@
 @extends('layouts.template')
 
 @section('content')
-    <h1>La page du chanteur : {{ $nom }}</h1>
+                <div id="chanteur-single-section">
+                    <h2 id="chanteur-single-section-title">{{ $nom }}</h2>
+                    <p id="chanteur-single-section-genre"><span>Genre :</span><a href="/genres#{{ $genres }}" id="lien-genre"> Pop</a></p>
+                    <div id="chanteur-single-section-contenu" class="section-contenu">
+                        <div class="section-contenu-choix">
+                            <div class="section-contenu-choix-titre">
+                                <div class="section-contenu-choix-titre-nom">Hello</div>
+                                <div class="section-contenu-choix-titre-date">10/2017</div>
+                                <div class="section-contenu-choix-titre-genre">Pop</div>
+                            </div>
+                            <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                            <div class="section-contenu-choix-like">
+                                <a href="#"><span class="far fa-heart"></span></a>
+                            </div>
+                        </div>
+                        <div class="section-contenu-choix">
+                            <div class="section-contenu-choix-titre">
+                                <div class="section-contenu-choix-titre-nom">Hello</div>
+                                <div class="section-contenu-choix-titre-date">10/2017</div>
+                                <div class="section-contenu-choix-titre-genre">Pop</div>
+                            </div>
+                            <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                            <div class="section-contenu-choix-like">
+                                <a href="#"><span class="far fa-heart"></span></a>
+                            </div>
+                        </div>
+                        <div class="section-contenu-choix">
+                            <div class="section-contenu-choix-titre">
+                                <div class="section-contenu-choix-titre-nom">Hello</div>
+                                <div class="section-contenu-choix-titre-date">10/2017</div>
+                                <div class="section-contenu-choix-titre-genre">Pop</div>
+                            </div>
+                            <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                            <div class="section-contenu-choix-like">
+                                <a href="#"><span class="far fa-heart"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 @endsection

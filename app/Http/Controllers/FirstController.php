@@ -32,11 +32,19 @@ class FirstController extends Controller
     }
     
     public function chanteurs() {
-        return view("firstcontroller.chanteurs");
+        
+        $genres = Genre::all();
+        $chanteurs = Chanteur::all();
+        
+        return view("firstcontroller.chanteurs", ["genres" => $genres, "chanteurs" => $chanteurs]);
     }
     
     public function chanteur_single($nom) {
-        return view("firstcontroller.chanteur_single", ["nom" => $nom]);
+        
+        $genres = Genre::all();
+        $chanteurs = Chanteur::all();
+        
+        return view("firstcontroller.chanteur_single", ["nom" => $nom, "genres" => $genres, "chanteurs" => $chanteurs]);
     }
     
     public function genres() {
@@ -45,5 +53,9 @@ class FirstController extends Controller
     
     public function search($regex) {
         return view("firstcontroller.search", ["regex" => $regex]);
+    }
+    
+    public function contenu() {
+        return view("firstcontroller.contenu");
     }
 }
