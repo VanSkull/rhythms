@@ -91,42 +91,42 @@ class FirstController extends Controller
     }
     
     public function store_singer(Request $request) {
-        /*$request->validate([
-            'music-title' => 'required|min:1|max:255',
-            'music-file' => 'required|file|mimes:mp3,ogg',
-            'music-photo' => 'required|file|mimes:mp3,ogg',
+        $request->validate([
+            'chanteur-nom' => 'required|min:1|max:255',
+            'chanteur-photo' => 'required|file|mimes:png,jpeg,jpg',
+            'chanteur-genre' => 'required|numeric',
         ]);
         
-        $song = new Song();
+        $name_photo = $request->file('chanteur-photo')->hashName();
+        $request->file('chanteur-photo')->move("uploads/singer_photos", $name_photo);
         
-        $song->titre = ;
-        $song->fichier = ;
-        $song->image = ;
-        $song->id_chanteur = ;
-        $song->id_genre = ;
+        $chanteur = new Chanteur();
         
-        $song->save();
+        $chanteur->nom = $request->input('chanteur-nom');
+        $chanteur->photo = "/uploads/singer_photos/".$name_photo;
+        $chanteur->id_genre = $request->input('chanteur-genre');
         
-        return back();*/
+        $chanteur->save();
+        
+        return back();
     }
     
     public function store_genre(Request $request) {
-        /*$request->validate([
-            'music-title' => 'required|min:1|max:255',
-            'music-file' => 'required|file|mimes:mp3,ogg',
-            'music-photo' => 'required|file|mimes:mp3,ogg',
+        $request->validate([
+            'genre-title' => 'required|min:1|max:255',
+            'genre-file' => 'required|file|mimes:png,jpeg,jpg',
         ]);
         
-        $song = new Song();
+        $name_photo = $request->file('genre-photo')->hashName();
+        $request->file('genre-photo')->move("uploads/genre_photos", $name_photo);
         
-        $song->titre = ;
-        $song->fichier = ;
-        $song->image = ;
-        $song->id_chanteur = ;
-        $song->id_genre = ;
+        $genre = new Genre();
         
-        $song->save();
+        $genre->nom = $request->input('genre-title');
+        $genre->image = "/uploads/genre_photos/".$name_photo;
         
-        return back();*/
+        $genre->save();
+        
+        return back();
     }
 }
