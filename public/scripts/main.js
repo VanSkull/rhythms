@@ -29,3 +29,11 @@ function displayContenu(type){
             newGenre.style.display = "none";
     }
 }
+
+function showFile(file, champ){
+    let fileArray = file.split('\\');
+    let fileName = fileArray[fileArray.length - 1];
+    
+    document.getElementById(champ).innerHTML = fileName;
+    document.getElementById(champ).classList.add("file-selected");
+}

@@ -30,13 +30,13 @@
                                 @csrf
                                 <input type="text" name="music-title" placeholder="Titre de la musique" required />
                                 <div id="music-file-champ">
-                                    <span class="name-file">Fichier de la musique</span>
-                                    <input type="file" name="music-file" id="music-file" required />
+                                    <span class="name-file" id="music-file-name">Fichier de la musique</span>
+                                    <input type="file" name="music-file" id="music-file" required onchange="showFile(this.value, 'music-file-name');" accept=".mp3" />
                                     <label for="music-file">Uploader</label>
                                 </div>                                
                                 <div id="music-photo-champ">
-                                    <span class="name-photo">Photo de la musique</span>
-                                    <input type="file" name="music-photo" id="music-photo" required />
+                                    <span class="name-photo" id="music-photo-name">Photo de la musique</span>
+                                    <input type="file" name="music-photo" id="music-photo" required onchange="showFile(this.value, 'music-photo-name');" accept="image/jpeg, image/png" />
                                     <label for="music-photo">Uploader</label>
                                 </div>
                                 <select name="music-chanteur" required>
@@ -70,8 +70,8 @@
                                 @csrf
                                 <input type="text" name="chanteur-nom" placeholder="Nom du chanteur" required />
                                 <div id="chanteur-photo-champ">
-                                    <span class="name-photo">Photo du chanteur</span>
-                                    <input type="file" name="chanteur-photo" id="chanteur-photo" required />
+                                    <span class="name-photo" id="singer-photo-name">Photo du chanteur</span>
+                                    <input type="file" name="chanteur-photo" id="chanteur-photo" required onchange="showFile(this.value, 'singer-photo-name');" accept="image/jpeg, image/png" />
                                     <label for="chanteur-photo">Uploader</label>
                                 </div>
                                 <select name="chanteur-genre" required>
@@ -99,8 +99,8 @@
                                 @csrf
                                 <input type="text" name="genre-title" placeholder="Nom du genre" required />
                                 <div id="genre-photo-champ">
-                                    <span class="name-photo">Illustration du genre</span>
-                                    <input type="file" name="genre-photo" id="genre-photo" required />
+                                    <span class="name-photo" id="genre-photo-name">Illustration du genre</span>
+                                    <input type="file" name="genre-photo" id="genre-photo" required onchange="showFile(this.value, 'genre-photo-name');" accept="image/jpeg, image/png" />
                                     <label for="genre-photo">Uploader</label>
                                 </div>
 

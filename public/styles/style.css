@@ -1065,7 +1065,7 @@ body{
 }
 
 #main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ .name-file.file-selected,
-#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ .name-photo.file-selected
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ .name-photo.file-selected,
 #main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ .name-photo.file-selected,
 #main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ .name-photo.file-selected{
     font-style: normal;
