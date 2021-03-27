@@ -18,5 +18,10 @@ Route::get('/search/{regex}', [FirstController::class, 'search']);
 
 Route::get('/addcontenu', [FirstController::class, 'contenu']);
 
-Auth::routes();
+Route::post('/addcontenu/song', [FirstController::class, 'store_song'])->middleware('auth');
 
+Route::post('/addcontenu/singer', [FirstController::class, 'store_singer'])->middleware('auth');
+
+Route::post('/addcontenu/genre', [FirstController::class, 'store_genre'])->middleware('auth');
+
+Auth::routes();

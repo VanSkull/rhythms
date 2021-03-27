@@ -196,10 +196,10 @@
                         foreach($songs as $s){
                         ?>
                         <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
+                            <img class="section-contenu-choix-image" src="{{ $s->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $s->titre }}</h4>
-                                <p class="section-contenu-choix-infos-desc">de {{$s->chanteur->nom}}</p>
+                                <p class="section-contenu-choix-infos-desc">de {{$s->titre}}</p>
                             </div>
                         </div>
                         <?php

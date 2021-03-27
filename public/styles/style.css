@@ -916,3 +916,168 @@ body{
     text-align: center;
     margin: 0 auto;
 }
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu > div{
+    border: none;
+    aspect-ratio: auto;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #selection-contenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #selection-contenu label{
+    font-size: 36pt;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #selection-contenu select{
+    font-size: 20pt;
+    font-weight: bold;
+    color: #492F92;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border: 2px #707070 solid;
+    border-radius: 32.5px;
+    width: 300px;
+    outline: none;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form > *,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form > *,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form > *{
+    margin: 15px 0;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form input[type=submit],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form input[type=submit],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form input[type=submit]{
+    width: auto;
+    margin-left: auto;
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px #492F92 solid;
+    border-radius: 27.5px;
+    background-color: #FFFFFF;
+    transition: 0.3s ease-in-out;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form input[type=submit]:hover,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form input[type=submit]:hover,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form input[type=submit]:hover{
+    background-color: #492F92;
+    color: #000000;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form input[type=text],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form input[type=text],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form input[type=text]{
+    padding: 10px 20px;
+    border: 2px #707070 solid;
+    border-radius: 32.5px;
+    font-size: 20pt;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form input[type=text]::placeholder,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form input[type=text]::placeholder,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form input[type=text]::placeholder{
+    color: rgba(112, 112, 112, 0.5);
+    font-style: italic;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ{
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 2px #707070 solid;
+    padding: 5px 20px;
+    border-radius: 27.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ input[type=file],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ input[type=file],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ input[type=file],
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ input[type=file]{
+    display: none;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ label,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ label,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ label,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ label{
+    width: auto;
+    padding: 5px 15px;
+    background-color: #492F92;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 22.5px;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ label:hover,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ label:hover,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ label:hover,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ label:hover{
+    opacity: 1;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ .name-file,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ .name-photo,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ .name-photo,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ .name-photo{
+    font-size: 18pt;
+    padding: 5px 15px;
+    padding-left: 0;
+    color: rgba(112, 112, 112, 0.5);
+    font-style: italic;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-file-champ .name-file.file-selected,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form #music-photo-champ .name-photo.file-selected
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form #chanteur-photo-champ .name-photo.file-selected,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-genre form #genre-photo-champ .name-photo.file-selected{
+    font-style: normal;
+    color: #492F92;
+}
+
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanson form select,
+#main-contenu #main-contain #contenu-section #contenu-section-contenu #formulaire-chanteur form select{
+    padding: 10px 20px;
+    border: 2px #707070 solid;
+    border-radius: 32.5px;
+    font-size: 20pt;
+    color: #492F92;
+    outline: none;
+}

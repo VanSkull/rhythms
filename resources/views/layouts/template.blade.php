@@ -8,7 +8,8 @@
         
         <meta name="author" content="Valentin Vanhaecke, Lucie Mayeur" />
         <meta name="description" content="Rhythms, votre plateforme de streaming de musique préférée. Découvrez des milliers d'artistes, de chanteurs, de genres musicaux avec un accès illimité à tout moment." />
-        <meta name="keywords" content="musique, stream, streaming artiste, artistes, chanteur, chanteurs, chanteuse, chanteuses, écoute, détente, plateforme, playlist, playlists, genre, genres, rhythms" />        
+        <meta name="keywords" content="musique, stream, streaming artiste, artistes, chanteur, chanteurs, chanteuse, chanteuses, écoute, détente, plateforme, playlist, playlists, genre, genres, rhythms" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="icon" href="/img/icon_rhythms.png" type="image/png" />
         
         <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
@@ -133,5 +134,9 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Javascript & JQuery -->
+        <script src="/scripts/jquery-3.5.1.min.js"></script>
+        <script src="/scripts/main.js"></script>
     </body>
 </html>
