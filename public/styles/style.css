@@ -705,8 +705,29 @@ body{
 
 #main-contenu #music #music-lecteur #music-lecteur-boutons{
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
+#main-contenu #music #music-lecteur #music-lecteur-boutons button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#main-contenu #music #music-lecteur #music-lecteur-boutons button img{
+    width: 30px;
+    object-fit: contain;
+}
+
+#main-contenu #music #music-lecteur #music-lecteur-boutons #button-play-pause{
+    margin: 0 10px;
+}
+
+#main-contenu #music #music-lecteur #music-lecteur-boutons #button-play-pause img{
+    width: 35px;
+}
 
 /* Contenu de la page d'un chanteur spécifique */
 #main-contenu #main-contain #titres-section #titres-section-title{

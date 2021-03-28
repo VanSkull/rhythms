@@ -58,14 +58,12 @@
                                 <li><a href="/titres#all">Tous les titres</a></li>
                             </ul>
                         </li>
+                        @auth
                         <li><a href="/favoris">Favoris</a></li>
-                        @guest
-                            <!-- Rien à voir -->
-                        @else
                         @if(Auth::user()->admin == true)
                         <li><a href="/addcontenu">Ajouter</a></li>
                         @endif
-                        @endguest
+                        @endauth
                     </ul>
                 </nav>
             </div>

@@ -199,7 +199,7 @@
                             <img class="section-contenu-choix-image" src="{{ $s->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $s->titre }}</h4>
-                                <p class="section-contenu-choix-infos-desc">de {{$s->titre}}</p>
+                                <p class="section-contenu-choix-infos-desc">de {{$s->chanteur->nom}}</p>
                             </div>
                         </div>
                         <?php
@@ -282,9 +282,14 @@
                     ?>
                 </div>
                 
+                @auth
                 <div id="accueil-section-favoris">
                     <h2 id="accueil-section-favoris-titre" class="section-titre">Favoris</h2>
                     <div id="accueil-section-favoris-contenu" class="section-contenu">
+                        <?php
+                        $k = 0;
+                        foreach($favoris as $f){
+                        ?>
                         <div class="section-contenu-choix">
                             <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
                             <div class="section-contenu-choix-infos">
@@ -292,72 +297,21 @@
                                 <p class="section-contenu-choix-infos-desc">de Orelsan</p>
                             </div>
                         </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
-                            </div>
-                        </div>
+                        <?php
+                            $k++;
+                            if($k == 10) break;
+                        }
+                        ?>
                     </div>
+                    <?php
+                        if($k == 10){
+                    ?>
                     <div id="accueil-section-favoris-plus">
                         <a id="accueil-section-favoris-plus-lien" href="/favoris" >Voir tous mes favoris</a>
                     </div>
+                    <?php
+                        }
+                    ?>
                 </div>
+                @endauth
 @endsection
