@@ -2,7 +2,7 @@
 
 @section('content')
                 <div id="chanteur-single-section">
-                    <h2 id="chanteur-single-section-title">{{ $nom }}</h2>
+                    <h2 id="chanteur-single-section-title">{{ $chanteur->nom }}</h2>
                     <p id="chanteur-single-section-genre"><span>Genre :</span><a href="/genres#{{ $genres }}" id="lien-genre"> Pop</a></p>
                     <div id="chanteur-single-section-contenu" class="section-contenu">
                         <div class="section-contenu-choix">

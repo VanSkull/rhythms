@@ -137,6 +137,7 @@ body{
     color: #492F92;
     font-size: 30px;
     vertical-align: middle;
+    outline: none;
 }
 
 #main-contenu #header #identification-lang{
@@ -1080,4 +1081,168 @@ body{
     font-size: 20pt;
     color: #492F92;
     outline: none;
+}
+
+/*Contenu Recherche*/
+#main-contenu #main-contain #search-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #search-section #search-section-title{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu > div{
+    aspect-ratio: auto;
+    border: none;
+    border-radius: 0;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu > div h3{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: start;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu > div > div{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur,
+#main-contenu #main-contain #search-section #search-section-contenu #search-song{
+    margin-bottom: 35px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-nothing,
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-nothing,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-nothing{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #FF0000;
+    border: 2px #FF0000 solid;
+    border-radius: 12.5px;
+    background-color: rgb(255, 200, 200);
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all > div,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all > div{
+    position: relative;
+    aspect-ratio: 1/1;
+    border: 2px solid #707070;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all > div:hover,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all > div:hover{
+    cursor: pointer;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all > div img,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all > div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all > div > div,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all > div > div{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-chanteur #search-chanteur-all > div > div h4,
+#main-contenu #main-contain #search-section #search-section-contenu #search-genre #search-genre-all > div > div h4{
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-all .search-song-choix{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    aspect-ratio: auto;
+    border-radius: 0;
+    border: none;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-all .search-song-choix .search-song-choix-titre{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: #492F92;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-all .search-song-choix .search-song-choix-titre:hover{
+    cursor: pointer;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-all .search-song-choix .titre-arrow{
+    font-size: 50px;
+}
+
+#main-contenu #main-contain #search-section #search-section-contenu #search-song #search-song-all .search-song-choix .search-song-choix-like a{
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 50px;
+    border-radius: 0;
+    border: none;
 }

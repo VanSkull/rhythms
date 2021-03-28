@@ -10,7 +10,7 @@ Route::get('/genres', [FirstController::class, 'genres']);
 
 Route::get('/chanteurs', [FirstController::class, 'chanteurs']);
 
-Route::get('/chanteurs/{nom}', [FirstController::class, 'chanteur_single']);
+Route::get('/chanteurs/{id}', [FirstController::class, 'chanteur_single']);
 
 Route::get('/titres', [FirstController::class, 'titres']);
 

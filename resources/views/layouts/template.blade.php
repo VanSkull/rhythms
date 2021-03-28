@@ -74,7 +74,7 @@
         <div id="main-contenu">
             <header id="header">
                 <div id="form-search">
-                    <input id="search-bar" name="search" type="search" placeholder="Rechercher..." onkeyup="runSearch(event, this.value);" />
+                    <input id="search-bar" name="search" type="search" placeholder="Rechercher..." onkeyup="runSearch(this.value);" />
                 </div>
                 <div id="identification-lang">
                         @guest
@@ -128,9 +128,9 @@
                 </div>
                 <div id="music-lecteur">
                     <div id="music-lecteur-boutons">
-                        <button id="button-previous">Previous</button>
-                        <button id="button-play-pause">Play</button>
-                        <button id="button-next">Next</button>
+                        <button id="button-previous"><img src="/img/previous.png" alt="" /></button>
+                        <button id="button-play-pause"><img id="button-toogle-img" src="/img/play_button.png" alt="" /></button>
+                        <button id="button-next"><img src="/img/next.png" alt="" /></button>
                     </div>
                     <input id="music-lecteur-slider" type="range" min="0" max="100" value="0" />
                 </div>

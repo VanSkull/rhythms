@@ -1,9 +1,39 @@
+/* Général */
+function viewChanteur(id){
+    window.location.href = "/chanteurs/" + id;
+}
+
+function viewGenre(nom){
+    window.location.href = "/genres#" + nom.toLowerCase().replace('-', '');
+}
+
+function ListenMusic(){
+    
+}
+
 /* Template général */
     /* Barre de recherche */
-function runSearch(e, s){
-    if(e.keyCode == 13){
+function runSearch(s){
+    if(event.keyCode == 13){
         window.location.href = "/search/" + s;
     }
+}
+
+    /* Lecteur de musique */
+function playMusic(){
+    
+}
+
+function stopMusic(){
+    
+}
+
+function nextMusic(){
+    
+}
+
+function previousMusic(){
+    
 }
 
 /* Page Nouveau contenu */
