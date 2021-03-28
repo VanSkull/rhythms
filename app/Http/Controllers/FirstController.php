@@ -32,7 +32,12 @@ class FirstController extends Controller
     }
     
     public function titres() {
-        return view("firstcontroller.titres");
+        $newsSongs = Song::orderBy('updated_at', 'desc')->limit(5)->get();
+        $popularSongs = Song::orderBy('updated_at', 'desc')->limit(10)->get();
+        $ratedSongs = Song::orderBy('updated_at', 'desc')->limit(10)->get();
+        $songs = Song::all();
+        
+        return view("firstcontroller.titres", ["songs" => $songs, "newsSongs" => $newsSongs, "popularSongs" => $popularSongs, "ratedSongs" => $ratedSongs]);
     }
     
     public function chanteurs() {

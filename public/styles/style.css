@@ -591,7 +591,7 @@ body{
     background-color: transparent;
 }
 
-/* Contenu de la page des titres */
+/* Contenu de la page des chanteurs */
 #main-contenu #main-contain #chanteur-section #chanteur-section-all .titres{
     aspect-ratio: auto;
     display: flex;
@@ -787,41 +787,44 @@ body{
     width: 35px;
 }
 
-/* Contenu de la page d'un chanteur spécifique */
+/* Contenu de la page des titres */
 #main-contenu #main-contain #titres-section #titres-section-title{
     font-size: 52px;
     font-weight: bold;
-    text-transform: uppercase;
     font-style: italic;
+    text-transform: uppercase;
     text-align: center;
     margin: 0 auto;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-genre{
-    font-size: 42px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-style: italic;
-    text-align: left;
-}
-
-#main-contenu #main-contain #titres-section #titres-section-genre span{
-    text-decoration: underline;
-}
-
-#main-contenu #main-contain #titres-section #titres-section-genre #lien-genre{
-    text-decoration: none;
-    color: #492F92;
-}
-
-#main-contenu #main-contain #titres-section #titres-section-contenu{
+#main-contenu #main-contain #titres-section .titres-section-type{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
+    margin-bottom: 40px;
+    margin-top: 0;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix{
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-type-titre{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #492F92;
+    margin-bottom: 20px;
+}
+
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu .section-contenu-choix{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -832,10 +835,10 @@ body{
     border: none;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-titre{
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu .section-contenu-choix .section-contenu-choix-titre{
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     background-color: #492F92;
@@ -847,11 +850,11 @@ body{
     border-radius: 50px;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .titre-arrow{
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu .section-contenu-choix .titre-arrow{
     font-size: 50px;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-like a{
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu .section-contenu-choix .section-contenu-choix-like a{
     color: #FFFFFF;
     padding: 0;
     font-size: 50px;
@@ -859,7 +862,7 @@ body{
     border: none;
 }
 
-#main-contenu #main-contain #titres-section #titres-section-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
+#main-contenu #main-contain #titres-section .titres-section-type .titres-section-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
     background-color: transparent;
 }
 
