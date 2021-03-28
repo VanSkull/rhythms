@@ -31,7 +31,14 @@
                         <li><a href="/">Accueil</a></li>
                         <li><a href="/genres">Genres</a>
                             <ul>
-                                <li><a href="/genres#pop">Pop</a></li>
+                                <?php
+                                use App\Models\Genre;
+                                
+                                $genres = Genre::all();
+                                ?>
+                                @foreach($genres as $g)
+                                <li><a href="/genres#{{ str_replace('-', '', strtolower($g->nom)) }}">{{ $g->nom }}</a></li>
+                                <!--<li><a href="/genres#pop">Pop</a></li>
                                 <li><a href="/genres#rock">Rock</a></li>
                                 <li><a href="/genres#rap">Rap</a></li>
                                 <li><a href="/genres#classique">Classique</a></li>
@@ -39,7 +46,8 @@
                                 <li><a href="/genres#punk">Punk</a></li>
                                 <li><a href="/genres#metal">Metal</a></li>
                                 <li><a href="/genres#hiphop">Hip-Hop</a></li>
-                                <li><a href="/genres#rnb">RnB</a></li>
+                                <li><a href="/genres#rnb">RnB</a></li>-->
+                                @endforeach
                             </ul>
                         </li>
                         <li><a href="/chanteurs">Chanteurs</a>

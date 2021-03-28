@@ -44,11 +44,11 @@ class FirstController extends Controller
     }
     
     public function chanteur_single($id) {
-        
+        $songs = Song::all();
         $genres = Genre::all();
         $chanteur = Chanteur::find($id);
         
-        return view("firstcontroller.chanteur_single", ["id" => $id, "genres" => $genres, "chanteur" => $chanteur]);
+        return view("firstcontroller.chanteur_single", ["genres" => $genres, "chanteur" => $chanteur, "songs" => $songs]);
     }
     
     public function genres() {
