@@ -7,7 +7,7 @@ function viewGenre(nom){
     window.location.href = "/genres#" + nom.toLowerCase().replace('-', '');
 }
 
-function listenMusic(file, chanteurName, songName){
+function listenMusic(file, chanteurName, songName, songImage){
     
 }
 

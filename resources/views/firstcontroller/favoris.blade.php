@@ -9,7 +9,7 @@
                         @else
                         @foreach($songFav as $song)
                         <div class="section-contenu-choix">
-                            <div class="section-contenu-choix-titre" onclick="listenMusic('{{ $song->titre->fichier }}', '{{ $song->titre->chanteur->nom }}', '{{ $song->titre->image }}');">
+                            <div class="section-contenu-choix-titre" onclick="listenMusic('{{ $song->titre->fichier }}', '{{ $song->titre->chanteur->nom }}', '{{ $song->titre->titre }}', '{{ $song->titre->image }}');">
                                 <div class="section-contenu-choix-titre-nom">{{ $song->titre->titre }}</div>
                                 <div class="section-contenu-choix-titre-chanteur">{{ $song->titre->chanteur->nom }}</div>
                                 <div class="section-contenu-choix-titre-date">{{ date("m/Y", strtotime($song->titre->updated_at)) }}</div>

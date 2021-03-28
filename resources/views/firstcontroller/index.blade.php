@@ -46,7 +46,7 @@
                     <h2 id="accueil-section-genres-titre" class="section-titre">Genres</h2>
                     <div id="accueil-section-genres-contenu" class="section-contenu">
                         @foreach($genres as $g)
-                        <div class="section-contenu-choix">
+                        <div class="section-contenu-choix" onclick="viewGenre('{{ $g->nom }}');">
                             <img class="section-contenu-choix-image" src="{{ $g->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $g->nom }}</h4>
@@ -111,7 +111,7 @@
                         $i = 0;
                         foreach($chanteurs as $c){
                         ?>
-                        <div class="section-contenu-choix">
+                        <div class="section-contenu-choix" onclick="viewChanteur('{{ $c->id }}');">
                             <img class="section-contenu-choix-image" src="{{ $c->photo }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $c->nom }}</h4>
@@ -195,7 +195,7 @@
                         $j = 0;
                         foreach($songs as $s){
                         ?>
-                        <div class="section-contenu-choix">
+                        <div class="section-contenu-choix" onclick="listenMusic('{{ $s->fichier }}', '{{ $s->chanteur->nom }}', '{{ $s->titre }}', '{{ $s->image }}');">
                             <img class="section-contenu-choix-image" src="{{ $s->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $s->titre }}</h4>

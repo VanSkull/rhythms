@@ -492,7 +492,19 @@ body{
 }
 
 /* Contenu de la page des genres */
-#main-contenu #main-contain #genres-section #genres-section-title{
+#main-contenu #main-contain #genres-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;    
+}
+
+#main-contenu #main-contain #genres-section .genres-section-type{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#main-contenu #main-contain #genres-section .genres-section-type .genres-section-type-title{
     font-size: 52px;
     font-weight: bold;
     text-transform: uppercase;
@@ -501,28 +513,44 @@ body{
     margin: 0 auto;
 }
 
-#main-contenu #main-contain #chanteur-single-section #genres-section-chanteur{
-    font-weight: bold;
-    text-transform: uppercase;
-    font-style: italic;
-    text-align: left;
-}
-
-#main-contenu #main-contain #genres-section #genres-section-chanteur #lien-chanteur{
-    font-size: 30px;
-    text-decoration: none;
-    color: #492F92;
-}
-
-#main-contenu #main-contain #genres-section #genres-section-contenu{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur{
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
+    margin-bottom: 40px;
 }
 
-#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-lien .lien-chanteur{
+    font-size: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+    color: #492F92;
+    background-color: transparent;
+    transition: 0s;
+}
+
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-lien .lien-chanteur:hover{
+    background-color: transparent;
+}
+
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu .section-contenu-choix{
     width: 100%;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -532,7 +560,7 @@ body{
     border: none;
 }
 
-#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-titre{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu .section-contenu-choix .section-contenu-choix-titre{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -547,11 +575,11 @@ body{
     border-radius: 50px;
 }
 
-#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .titre-arrow{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu .section-contenu-choix .titre-arrow{
     font-size: 50px;
 }
 
-#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-like a{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu .section-contenu-choix .section-contenu-choix-like a{
     color: #FFFFFF;
     padding: 0;
     font-size: 50px;
@@ -559,7 +587,7 @@ body{
     border: none;
 }
 
-#main-contenu #main-contain #genres-section #genres-section-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
+#main-contenu #main-contain #genres-section .genres-section-type .section-chanteur .section-chanteur-contenu .section-contenu-choix .section-contenu-choix-like a:hover{
     background-color: transparent;
 }
 

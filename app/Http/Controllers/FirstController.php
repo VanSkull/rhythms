@@ -52,7 +52,11 @@ class FirstController extends Controller
     }
     
     public function genres() {
-        return view("firstcontroller.genres");
+        $songs = Song::all();
+        $genres = Genre::all();
+        $chanteurs = Chanteur::all();
+        
+        return view("firstcontroller.genres", ["songs" => $songs, "genres" => $genres, "chanteurs" => $chanteurs]);
     }
     
     public function search($regex) {
