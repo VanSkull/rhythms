@@ -52,7 +52,13 @@ class FirstController extends Controller
     }
     
     public function search($regex) {
-        return view("firstcontroller.search", ["regex" => $regex]);
+        $songs = Song::all();
+        
+        $searchSong = Song::whereRaw("titre LIKE CONCAT('%', ?, '%')", [$regex])->orderBy('titre', 'desc')->get();
+        $searchChanteur = Chanteur::whereRaw("nom LIKE CONCAT('%', ?, '%')", [$regex])->orderBy('nom', 'desc')->get();
+        $searchGenre = Genre::whereRaw("nom LIKE CONCAT('%', ?, '%')", [$regex])->orderBy('nom', 'desc')->get();
+        
+        return view("firstcontroller.search", ["regex" => $regex, "songs" => $songs, "searchSong" => $searchSong, "searchChanteur" => $searchChanteur, "searchGenre" => $searchGenre]);
     }
     
     public function contenu() {        

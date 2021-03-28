@@ -1,3 +1,11 @@
+/* Template général */
+    /* Barre de recherche */
+function runSearch(e, s){
+    if(e.keyCode == 13){
+        window.location.href = "/search/" + s;
+    }
+}
+
 /* Page Nouveau contenu */
 function displayContenu(type){
     let newMusic = document.getElementById("formulaire-chanson");

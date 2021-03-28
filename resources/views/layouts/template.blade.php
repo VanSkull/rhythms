@@ -73,7 +73,9 @@
         
         <div id="main-contenu">
             <header id="header">
-                <input id="search-bar" name="search" type="search" placeholder="Rechercher..." />
+                <div id="form-search">
+                    <input id="search-bar" name="search" type="search" placeholder="Rechercher..." onkeyup="runSearch(event, this.value);" />
+                </div>
                 <div id="identification-lang">
                         @guest
                         <div id="inscription-connexion">

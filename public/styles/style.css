@@ -126,7 +126,7 @@ body{
     z-index: 998;
 }
 
-#main-contenu #header #search-bar{
+#main-contenu #header #form-search #search-bar{
     max-width: 900px;
     width: 700px;
     height: 60px;
