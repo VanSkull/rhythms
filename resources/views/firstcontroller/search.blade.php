@@ -33,7 +33,7 @@
                                     <div class="search-song-choix">
                                         <div class="search-song-choix-titre" onclick="listenMusic('{{ $resultSong->fichier }}');">
                                             <div class="search-song-choix-titre-nom">{{ $resultSong->titre }}</div>
-                                            <div class="search-song-choix-titre-chanteur">{{ $resultSong->id_chanteur }}</div>
+                                            <div class="search-song-choix-titre-chanteur">{{ $resultSong->chanteur->nom }}</div>
                                             <div class="search-song-choix-titre-date">{{ date("m/Y", strtotime($resultSong->updated_at)) }}</div>
                                             <div class="search-song-choix-titre-genre">Pop</div>
                                         </div>

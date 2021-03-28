@@ -16,7 +16,7 @@ Route::get('/titres', [FirstController::class, 'titres']);
 
 Route::get('/search/{regex}', [FirstController::class, 'search']);
 
-Route::get('/addcontenu', [FirstController::class, 'contenu']);
+Route::get('/addcontenu', [FirstController::class, 'contenu'])->middleware('auth');
 
 Route::post('/addcontenu/song', [FirstController::class, 'store_song'])->middleware('auth');
 
