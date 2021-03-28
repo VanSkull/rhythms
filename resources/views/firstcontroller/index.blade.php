@@ -290,7 +290,7 @@
                         $k = 0;
                         foreach($favoris as $f){
                         ?>
-                        <div class="section-contenu-choix">
+                        <div class="section-contenu-choix" onclick="listenMusic">
                             <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
@@ -309,6 +309,10 @@
                     <div id="accueil-section-favoris-plus">
                         <a id="accueil-section-favoris-plus-lien" href="/favoris" >Voir tous mes favoris</a>
                     </div>
+                    <?php
+                        }elseif($k == 0){
+                    ?>
+                    <p id="accueil-section-favoris-nothing">Vous n'avez, pour l'instant, aucun favoris dans votre liste</p>
                     <?php
                         }
                     ?>

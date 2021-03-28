@@ -24,7 +24,11 @@ class FirstController extends Controller
     }
     
     public function favoris() {
-        return view("firstcontroller.favoris");
+        $songs = Song::all();
+        
+        $songFav = Favoris::whereRaw("id_user=?", [Auth::id()])->orderBy('id_titre', 'desc')->get();
+        
+        return view("firstcontroller.favoris", ["songs" => $songs, "songFav" => $songFav]);
     }
     
     public function titres() {

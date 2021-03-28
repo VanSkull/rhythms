@@ -4,7 +4,7 @@ use App\Http\Controllers\FirstController;
 
 Route::get('/', [FirstController::class, 'index']);
 
-Route::get('/favoris', [FirstController::class, 'favoris']);
+Route::get('/favoris', [FirstController::class, 'favoris'])->middleware('auth');
 
 Route::get('/genres', [FirstController::class, 'genres']);
 
