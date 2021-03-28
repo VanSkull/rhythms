@@ -370,7 +370,7 @@ body{
 
 
 /* Contenu de la page des chanteurs */
-#main-contenu #main-contain #chanteur-section #chanteur-section-title{
+#main-contenu #main-contain #chanteurs-section #chanteurs-section-title{
     font-size: 52px;
     font-weight: bold;
     text-transform: uppercase;
@@ -379,38 +379,65 @@ body{
     margin: 0 auto;
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-type-titre{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #492F92;
+    margin-bottom: 20px;
+}
+
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all .chanteur-single{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single{
     aspect-ratio: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    border: none;
-    border-radius: 0;
+    border: 2px #707070 solid;
+    border-radius: 15px;
+    overflow: hidden
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all .chanteur-single .chanteur-single-photo{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single:hover{
+    cursor: pointer;
+}
+
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single .chanteur-single-photo{
     width: 40%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center center;
+    border-radius: 15px;
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all .chanteur-single .chanteur-single-infos{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single .chanteur-single-infos{
     margin-left: 15px;
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all .chanteur-single .chanteur-single-infos .chanteur-single-infos-nom{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single .chanteur-single-infos .chanteur-single-infos-nom{
     font-size: 36px;
     font-weight: bold;
 }
 
-#main-contenu #main-contain #chanteur-section #chanteur-section-all .chanteur-single .chanteur-single-infos .chanteur-single-infos-genre{
+#main-contenu #main-contain #chanteurs-section .chanteurs-section-type .chanteurs-section-all .chanteur-single .chanteur-single-infos .chanteur-single-infos-genre{
     font-size: 28px;
     font-weight: lighter;
 }

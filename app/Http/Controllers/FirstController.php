@@ -41,11 +41,14 @@ class FirstController extends Controller
     }
     
     public function chanteurs() {
+        $songs = Song::all();
         
-        $genres = Genre::all();
+        $newsChanteurs = Chanteur::orderBy('updated_at', 'desc')->limit(5)->get();
+        $popularChanteurs = Chanteur::orderBy('updated_at', 'desc')->limit(10)->get();
+        $ratedChanteurs = Chanteur::orderBy('updated_at', 'desc')->limit(10)->get();
         $chanteurs = Chanteur::all();
         
-        return view("firstcontroller.chanteurs", ["genres" => $genres, "chanteurs" => $chanteurs]);
+        return view("firstcontroller.chanteurs", ["songs" => $songs, "newsChanteurs" => $newsChanteurs, "popularChanteurs" => $popularChanteurs, "ratedChanteurs" => $ratedChanteurs, "chanteurs" => $chanteurs]);
     }
     
     public function chanteur_single($id) {
