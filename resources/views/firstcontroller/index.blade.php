@@ -4,7 +4,16 @@
                 <div id="accueil-section-news">
                     <h2 id="accueil-section-news-titre" class="section-titre">Nouveautés</h2>
                     <div id="accueil-section-news-contenu" class="section-contenu">
+                        @foreach($news as $n)
                         <div class="section-contenu-choix">
+                            <img class="section-contenu-choix-image" src="{{ $n->image }}" alt="" />
+                            <div class="section-contenu-choix-infos">
+                                <h4 class="section-contenu-choix-infos-titre">{{ $n->titre }}</h4>
+                                <p class="section-contenu-choix-infos-desc">Nouvelle chanson</p>
+                            </div>
+                        </div>
+                        @endforeach
+                        <!--<div class="section-contenu-choix">
                             <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">Orelsan</h4>
@@ -31,14 +40,7 @@
                                 <h4 class="section-contenu-choix-infos-titre">Orelsan</h4>
                                 <p class="section-contenu-choix-infos-desc">Nouveau chanteur</p>
                             </div>
-                        </div>
-                        <div class="section-contenu-choix">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
-                            <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Orelsan</h4>
-                                <p class="section-contenu-choix-infos-desc">Nouveau chanteur</p>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 
