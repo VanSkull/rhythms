@@ -4,14 +4,26 @@ $(document).ready(function(){
     $(document).on('submit', 'form[data-pjax]', function(event) {
         $.pjax.submit(event, '#main-contain')
     })
+    
+    $(document).pjax('a', '#main-contain');
+    /*$(document).pjax('div.chanteur', '#main-contain');
+    $(document).pjax('div.genre', '#main-contain');*/
 });
 
 function viewChanteur(id){
-    window.location.href = "/chanteurs/" + id;
+    if($.support.pjax){
+       $.pjax({url: "/chanteurs/" + id, container: '#main-contain'})
+    }else{
+        window.location.href = "/chanteurs/" + id;
+    }    
 }
 
 function viewGenre(nom){
-    window.location.href = "/genres#" + nom.toLowerCase().replace('-', '');
+    if($.support.pjax){
+       $.pjax({url: "/genres#" + nom.toLowerCase().replace('-', ''), container: '#main-contain'})
+    }else{
+        window.location.href = "/genres#" + nom.toLowerCase().replace('-', '');
+    }      
 }
 
 function listenMusic(file, chanteurName, songName, songImage){
