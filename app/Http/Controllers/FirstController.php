@@ -18,9 +18,11 @@ class FirstController extends Controller
         $genres = Genre::all();
         $chanteurs = Chanteur::all();
         $songs = Song::all();
-        $favoris = Favoris::all();
+        $favoris = Favoris::whereRaw("id_user=?", [Auth::id()])->orderBy('id_titre', 'desc')->get();
         
-        return view("firstcontroller.index", ["genres" => $genres, "chanteurs" => $chanteurs, "songs" => $songs, "favoris" => $favoris]);
+        $news = Song::select('*')->orderBy('updated_at', 'desc')->limit(5)->get();
+        
+        return view("firstcontroller.index", ["news" => $news, "genres" => $genres, "chanteurs" => $chanteurs, "songs" => $songs, "favoris" => $favoris]);
     }
     
     public function favoris() {
