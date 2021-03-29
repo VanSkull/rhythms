@@ -42,6 +42,7 @@ function listenMusic(file, chanteurName, songName, songImage){
     chanteurNom.innerHTML = chanteurName;
     
     lecteur.src = file;
+    lecteur.load();
     lecteur.currentTime = 0;
     
     console.log(lecteur.duration);
@@ -53,6 +54,8 @@ function listenMusic(file, chanteurName, songName, songImage){
     playButton.setAttribute("onClick", "stopMusic();");
     playButtonImg.src = "/img/pause_button.png";
 }
+
+setInterval(updateSlider, 1000);
 
 /* Template général */
     /* Barre de recherche */
@@ -121,12 +124,28 @@ function previousMusic(){
 }
 
 function slideMusic(time){
-    let lecteur = document.getElementById("music-lecteur-media");
+    let lecteur = document.getElementById("music-lecteur-media");    
+    let slider = document.getElementById("music-lecteur-slider");
+    
+    let slider_position = lecteur.duration * (slider.value / 100)
     
     console.log(time);
     if(lecteur.src != ""){
-        lecteur.currentTime = parseInt(time);
+        lecteur.canplay = function() {
+            lecteur.currentTime = slider_position;
+        }
         console.log(lecteur.currentTime);
+    }
+}
+
+function updateSlider(){
+    let position = 0;
+    let lecteur = document.getElementById("music-lecteur-media");    
+    let slider = document.getElementById("music-lecteur-slider");
+    
+    if(!isNaN(lecteur.duration)){
+        position = lecteur.currentTime * (100 / lecteur.duration);
+	   slider.value =  position;
     }
 }
 

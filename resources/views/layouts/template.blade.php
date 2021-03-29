@@ -139,7 +139,7 @@
                         <button id="button-play-pause"  onclick="playMusic();"><img id="button-toogle-img" src="/img/play_button.png" alt="" /></button>
                         <button id="button-next" onclick="nextMusic();"><img src="/img/next.png" alt="" /></button>
                     </div>
-                    <input id="music-lecteur-slider" type="range" min="0" max="1" value="0" step="1" oninput="slideMusic(this.value);" />
+                    <input id="music-lecteur-slider" type="range" min="0" max="100" value="0" step="1" onchange="slideMusic(this.value);" />
                 </div>
             </div>
         </div>
