@@ -26,7 +26,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="post" action="/addcontenu/song" enctype="multipart/form-data">
+                            <form method="post" [data-pjax] action="/addcontenu/song" enctype="multipart/form-data">
                                 @csrf
                                 <input type="text" name="music-title" placeholder="Titre de la musique" required />
                                 <div id="music-file-champ">
@@ -66,7 +66,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="post" action="/addcontenu/singer" enctype="multipart/form-data">
+                            <form method="post" [data-pjax] action="/addcontenu/singer" enctype="multipart/form-data">
                                 @csrf
                                 <input type="text" name="chanteur-nom" placeholder="Nom du chanteur" required />
                                 <div id="chanteur-photo-champ">
@@ -95,7 +95,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="post" action="/addcontenu/genre" enctype="multipart/form-data">
+                            <form method="post" [data-pjax] action="/addcontenu/genre" enctype="multipart/form-data">
                                 @csrf
                                 <input type="text" name="genre-title" placeholder="Nom du genre" required />
                                 <div id="genre-photo-champ">

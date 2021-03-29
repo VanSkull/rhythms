@@ -133,18 +133,20 @@
                     </div>
                 </div>
                 <div id="music-lecteur">
+                    <audio id="music-lecteur-media"></audio>
                     <div id="music-lecteur-boutons">
-                        <button id="button-previous"><img src="/img/previous.png" alt="" /></button>
-                        <button id="button-play-pause"><img id="button-toogle-img" src="/img/play_button.png" alt="" /></button>
-                        <button id="button-next"><img src="/img/next.png" alt="" /></button>
+                        <button id="button-previous" onclick="previousMusic();"><img src="/img/previous.png" alt="" /></button>
+                        <button id="button-play-pause"  onclick="playMusic();"><img id="button-toogle-img" src="/img/play_button.png" alt="" /></button>
+                        <button id="button-next" onclick="nextMusic();"><img src="/img/next.png" alt="" /></button>
                     </div>
-                    <input id="music-lecteur-slider" type="range" min="0" max="100" value="0" />
+                    <input id="music-lecteur-slider" type="range" min="0" max="191.832" step="1" oninput="slideMusic(this.value);" />
                 </div>
             </div>
         </div>
         
         <!-- Javascript & JQuery -->
         <script src="/scripts/jquery-3.5.1.min.js"></script>
+        <script src="/scripts/jquery.pjax.js"></script>
         <script src="/scripts/main.js"></script>
     </body>
 </html>

@@ -290,11 +290,11 @@
                         $k = 0;
                         foreach($favoris as $f){
                         ?>
-                        <div class="section-contenu-choix" onclick="listenMusic">
-                            <img class="section-contenu-choix-image" src="img/icon_rhythms.png" alt="" />
+                        <div class="section-contenu-choix" onclick="listenMusic('{{ $f->titre->fichier }}', '{{ $f->titre->chanteur->nom }}', '{{ $f->titre->titre }}', '{{ $f->titre->image }}');">
+                            <img class="section-contenu-choix-image" src="{{ $f->titre->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
-                                <h4 class="section-contenu-choix-infos-titre">Simple, basique</h4>
-                                <p class="section-contenu-choix-infos-desc">de Orelsan</p>
+                                <h4 class="section-contenu-choix-infos-titre">{{ $f->titre->titre }}</h4>
+                                <p class="section-contenu-choix-infos-desc">de {{ $f->titre->chanteur->nom }}</p>
                             </div>
                         </div>
                         <?php
