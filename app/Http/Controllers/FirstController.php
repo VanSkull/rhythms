@@ -151,4 +151,12 @@ class FirstController extends Controller
         
         return back();
     }
+    
+    public function add_fav($id){
+        $song = Song::find($id);
+        if($song == false)
+            abort(404);
+        Auth::user()->favSong()->toggle($id);
+        return back();
+    }
 }

@@ -31,16 +31,24 @@
                                 <div id="search-song-all">
                                 @foreach($searchSong as $resultSong)
                                     <div class="search-song-choix">
-                                        <div class="search-song-choix-titre" onclick="listenMusic('{{ $resultSong->fichier }}', {{ $resultSong->chanteur->nom }}, {{ $resultSong->titre }}, '{{ $resultSong->image }}');">
+                                        <div class="search-song-choix-titre" onclick="listenMusic('{{ $resultSong->fichier }}', '{{ $resultSong->chanteur->nom }}', '{{ $resultSong->titre }}', '{{ $resultSong->image }}');">
                                             <div class="search-song-choix-titre-nom">{{ $resultSong->titre }}</div>
                                             <div class="search-song-choix-titre-chanteur">{{ $resultSong->chanteur->nom }}</div>
                                             <div class="search-song-choix-titre-date">{{ date("m/Y", strtotime($resultSong->updated_at)) }}</div>
-                                            <div class="search-song-choix-titre-genre">Pop</div>
+                                            <div class="search-song-choix-titre-genre">{{ $resultSong->genre->nom }}</div>
                                         </div>
+                                        @auth
                                         <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                                        @if(Auth::user()->favSong->contains($resultSong->id))
                                         <div class="search-song-choix-like">
-                                            <a href="#"><span class="far fa-heart"></span></a>
+                                            <a href="/addfav/{{ $resultSong->id }}"><span class="fas fa-heart"></span></a>
                                         </div>
+                                        @else
+                                        <div class="search-song-choix-like">
+                                            <a href="/addfav/{{ $resultSong->id }}"><span class="far fa-heart"></span></a>
+                                        </div>
+                                        @endif
+                                        @endauth
                                     </div>
                                 @endforeach
                                 </div>

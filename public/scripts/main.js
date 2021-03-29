@@ -32,10 +32,11 @@ function listenMusic(file, chanteurName, songName, songImage){
     lecteur.src = file;
     lecteur.currentTime = 0;
     
-    /*console.log(lecteur.duration);
-    slider.max = lecteur.duration;*/
+    console.log(lecteur.duration);
+    slider.max = lecteur.duration;
     
     lecteur.play();
+    
     
     playButton.setAttribute("onClick", "stopMusic();");
     playButtonImg.src = "/img/pause_button.png";
@@ -58,11 +59,14 @@ function runSearch(s){
 function playMusic(){
     let lecteur = document.getElementById("music-lecteur-media");
     
+    let slider = document.getElementById("music-lecteur-slider");
+    
     let playButton = document.getElementById("button-play-pause");
     let playButtonImg = document.getElementById("button-toogle-img");
     
     
     console.log(lecteur.duration);
+    slider.max = lecteur.duration;
     if(lecteur.src != ""){
         lecteur.play();
 
@@ -109,7 +113,8 @@ function slideMusic(time){
     
     console.log(time);
     if(lecteur.src != ""){
-        lecteur.currentTime = time;
+        lecteur.currentTime = parseInt(time);
+        console.log(lecteur.currentTime);
     }
 }
 

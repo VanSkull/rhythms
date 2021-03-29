@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    
+    public function favSong(){
+        return $this->belongsToMany("App\Models\User", "favoris", "id_titre", "id_user");
+    }
 }

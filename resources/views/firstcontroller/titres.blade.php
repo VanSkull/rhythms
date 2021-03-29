@@ -14,11 +14,19 @@
                                     <div class="section-contenu-choix-titre-chanteur">{{ $nS->chanteur->nom }}</div>
                                     <div class="section-contenu-choix-titre-date">{{ date("m/Y", strtotime($nS->updated_at)) }}</div>
                                     <div class="section-contenu-choix-titre-genre">{{ $nS->genre->nom }}</div>
-                                </div>
+                                </div>                            
+                                @auth
                                 <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                                @if(Auth::user()->favSong->contains($nS->id))
                                 <div class="section-contenu-choix-like">
-                                    <a href="#"><span class="far fa-heart"></span></a>
+                                    <a href="/addfav/{{ $nS->id }}"><span class="fas fa-heart"></span></a>
                                 </div>
+                                @else
+                                <div class="section-contenu-choix-like">
+                                    <a href="/addfav/{{ $nS->id }}"><span class="far fa-heart"></span></a>
+                                </div>
+                                @endif
+                                @endauth
                             </div>
                             @endforeach
                         </div>
@@ -34,11 +42,19 @@
                                     <div class="section-contenu-choix-titre-chanteur">{{ $pS->chanteur->nom }}</div>
                                     <div class="section-contenu-choix-titre-date">{{ date("m/Y", strtotime($pS->updated_at)) }}</div>
                                     <div class="section-contenu-choix-titre-genre">{{ $pS->genre->nom }}</div>
-                                </div>
+                                </div>                            
+                                @auth
                                 <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                                @if(Auth::user()->favSong->contains($pS->id))
                                 <div class="section-contenu-choix-like">
-                                    <a href="#"><span class="far fa-heart"></span></a>
+                                    <a href="/addfav/{{ $pS->id }}"><span class="fas fa-heart"></span></a>
                                 </div>
+                                @else
+                                <div class="section-contenu-choix-like">
+                                    <a href="/addfav/{{ $pS->id }}"><span class="far fa-heart"></span></a>
+                                </div>
+                                @endif
+                                @endauth
                             </div>
                             @endforeach
                         </div>
@@ -54,11 +70,19 @@
                                     <div class="section-contenu-choix-titre-chanteur">{{ $rS->chanteur->nom }}</div>
                                     <div class="section-contenu-choix-titre-date">{{ date("m/Y", strtotime($rS->updated_at)) }}</div>
                                     <div class="section-contenu-choix-titre-genre">{{ $rS->genre->nom }}</div>
-                                </div>
+                                </div>                            
+                                @auth
                                 <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                                @if(Auth::user()->favSong->contains($rS->id))
                                 <div class="section-contenu-choix-like">
-                                    <a href="#"><span class="far fa-heart"></span></a>
+                                    <a href="/addfav/{{ $rS->id }}"><span class="fas fa-heart"></span></a>
                                 </div>
+                                @else
+                                <div class="section-contenu-choix-like">
+                                    <a href="/addfav/{{ $rS->id }}"><span class="far fa-heart"></span></a>
+                                </div>
+                                @endif
+                                @endauth
                             </div>
                             @endforeach
                         </div>
@@ -74,11 +98,19 @@
                                     <div class="section-contenu-choix-titre-chanteur">{{ $s->chanteur->nom }}</div>
                                     <div class="section-contenu-choix-titre-date">{{ date("m/Y", strtotime($s->updated_at)) }}</div>
                                     <div class="section-contenu-choix-titre-genre">{{ $s->genre->nom }}</div>
-                                </div>
+                                </div>                            
+                                @auth
                                 <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
+                                @if(Auth::user()->favSong->contains($s->id))
                                 <div class="section-contenu-choix-like">
-                                    <a href="#"><span class="far fa-heart"></span></a>
+                                    <a href="/addfav/{{ $s->id }}"><span class="fas fa-heart"></span></a>
                                 </div>
+                                @else
+                                <div class="section-contenu-choix-like">
+                                    <a href="/addfav/{{ $s->id }}"><span class="far fa-heart"></span></a>
+                                </div>
+                                @endif
+                                @endauth
                             </div>
                             @endforeach
                         </div>
