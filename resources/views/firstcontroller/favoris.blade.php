@@ -17,13 +17,13 @@
                             </div>                            
                             @auth
                             <div class="titre-arrow"><span class="fa fa-caret-right"></span></div>
-                            @if(Auth::user()->favSong->contains($song->id))
+                            @if(Auth::user()->favSong->contains($song->id_titre))
                             <div class="section-contenu-choix-like">
-                                <a href="/addfav/{{ $song->id }}"><span class="fas fa-heart"></span></a>
+                                <a href="/addfav/{{ $song->id_titre }}"><span class="fas fa-heart"></span></a>
                             </div>
                             @else
                             <div class="section-contenu-choix-like">
-                                <a href="/addfav/{{ $song->id }}"><span class="far fa-heart"></span></a>
+                                <a href="/addfav/{{ $song->id_titre }}"><span class="far fa-heart"></span></a>
                             </div>
                             @endif
                             @endauth
