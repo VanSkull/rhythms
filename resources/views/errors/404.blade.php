@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div>
+<div style="margin-top: 160px;">
     <h3 style="font-size: 52px;
     font-weight: bold;
     text-transform: uppercase;
