@@ -2,9 +2,9 @@
 
 @section('content')
                 <div id="titres-section">
-                    <h2 id="titres-section-title">Titres</h2>
+                    <h2 id="titres-section-title">{{ __('Titres') }}</h2>
                     <div id="news" class="titres-section-type">
-                        <h3 class="titres-section-type-titre">Nouveautées</h3>
+                        <h3 class="titres-section-type-titre">{{ __('Nouveautées') }}</h3>
                         
                         <div class="titres-section-contenu" class="section-contenu">
                             @foreach($newsSongs as $nS)
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div id="popular" class="titres-section-type">
-                        <h3 class="titres-section-type-titre">Les plus populaires</h3>
+                        <h3 class="titres-section-type-titre">{{ __('Les plus populaires') }}</h3>
                         
                         <div class="titres-section-contenu" class="section-contenu">
                             @foreach($popularSongs as $pS)
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div id="bestrated" class="titres-section-type">
-                        <h3 class="titres-section-type-titre">Les mieux notés</h3>
+                        <h3 class="titres-section-type-titre">{{ __('Les mieux notés') }}</h3>
                         
                         <div class="titres-section-contenu" class="section-contenu">
                             @foreach($ratedSongs as $rS)
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div id="all" class="titres-section-type">
-                        <h3 class="titres-section-type-titre">Tous les titres</h3>
+                        <h3 class="titres-section-type-titre">{{ __('Tous les titres') }}</h3>
                         
                         <div class="titres-section-contenu" class="section-contenu">
                             @foreach($songs as $s)

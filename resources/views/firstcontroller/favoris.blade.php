@@ -2,10 +2,10 @@
 
 @section('content')
                 <div id="favoris-section">
-                    <h2 id="favoris-section-title">Favoris</h2>
+                    <h2 id="favoris-section-title">{{ __('Favoris') }}</h2>
                     <div id="favoris-section-contenu" class="section-contenu">
                         @if(count($songFav) == 0)
-                        <p id="favoris-section-contenu-nothing">Vous n'avez, pour l'instant, aucun favoris dans votre liste</p>
+                        <p id="favoris-section-contenu-nothing">{{ __('Vous n\'avez, pour l\'instant, aucun favoris dans votre liste') }}</p>
                         @else
                         @foreach($songFav as $song)
                         <div class="section-contenu-choix">

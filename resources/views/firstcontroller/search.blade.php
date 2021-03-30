@@ -2,13 +2,13 @@
 
 @section('content')
                 <div id="search-section">
-                    <h2 id="search-section-title">Résultat de recherche :<br/>{{ $regex }}</h2>
+                    <h2 id="search-section-title">{{ __('Résultat de recherche :') }}<br/>{{ $regex }}</h2>
                     <div id="search-section-contenu" class="section-contenu">
                         <div id="search-chanteur">
-                            <h3 id="search-chanteur-title">Résultat des chanteurs :</h3>
+                            <h3 id="search-chanteur-title">{{ __('Résultat des chanteurs :') }}</h3>
                             
                             @if(count($searchChanteur) == 0)
-                                <p id="search-chanteur-nothing">Aucun résultat ne correspond à votre recherche</p>
+                                <p id="search-chanteur-nothing">{{ __('Aucun résultat ne correspond à votre recherche') }}</p>
                             @else
                                 <div id="search-chanteur-all">
                                 @foreach($searchChanteur as $resultChanteur)
@@ -23,10 +23,10 @@
                             @endif
                         </div>
                         <div id="search-song">
-                            <h3 id="search-song-title">Résultat des chansons :</h3>
+                            <h3 id="search-song-title">{{ __('Résultat des chansons :') }}</h3>
                             
                             @if(count($searchSong) == 0)
-                                <p id="search-song-nothing">Aucun résultat ne correspond à votre recherche</p>
+                                <p id="search-song-nothing">{{ __('Aucun résultat ne correspond à votre recherche') }}</p>
                             @else
                                 <div id="search-song-all">
                                 @foreach($searchSong as $resultSong)
@@ -55,10 +55,10 @@
                             @endif
                         </div>
                         <div id="search-genre">
-                            <h3 id="search-genre-title">Résultat des genres :</h3>
+                            <h3 id="search-genre-title">{{ __('Résultat des genres :') }}</h3>
                             
                             @if(count($searchGenre) == 0)
-                                <p id="search-genre-nothing">Aucun résultat ne correspond à votre recherche</p>
+                                <p id="search-genre-nothing">{{ __('Aucun résultat ne correspond à votre recherche') }}</p>
                             @else
                                 <div id="search-genre-all">
                                 @foreach($searchGenre as $resultGenre)

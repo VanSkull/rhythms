@@ -1,3 +1,71 @@
 {
-    "test": "1st test of translation's variables"
+    
+    "Accueil": "Home",
+    "Genres": "Genres",
+    "Genre": "Genre",
+    "Nouveautés": "Novelties",
+    "Chanteurs": "Singers",
+    "Les plus populaires": "Most popular",
+    "Les mieux notés": "Top rated",
+    "Tous les chanteurs": "All singers",
+    "Titres": "Songs",
+    "Nouveautées": "Novelties",
+    "Tous les titres": "All songs",
+    "Favoris": "Favorites",
+    "Ajouter": "Add",
+    
+    "Rechercher...": "Search...",
+    "S'inscrire": "Register",
+    "Se connecter": "Login",
+    
+    "Titre": "Song",
+    "Chanteur": "Singer",
+    
+    
+    "Connexion": "Login",
+    "Adresse e-mail": "E-mail address",
+    "Mot de passe": "Password",
+    "Se souvenir de moi": "Remember me",
+    
+    
+    "Inscription": "Register",
+    "Nom": "Name",
+    "Confirmation mot de passe": "Password confirmation",
+    
+    "Nouvelle chanson": "New song",
+    "Voir tous les chanteurs": "See all singers",
+    "de": "by",
+    "Voir tous les titres": "See all songs",
+    "Voir tous mes favoris": "See all my favorites",
+    "Vous n'avez, pour l'instant, aucun favoris dans votre liste": "You have, for the moment, no favorites in your list",
+    
+    "Résultat de recherche :": "Search result :",
+    "Résultat des chanteurs :": "Result of the singers :",
+    "Résultat des chansons :": "Result of the songs :",
+    "Résultat des genres :": "Result of the genres :",    
+    "Aucun résultat ne correspond à votre recherche": "No results were found for your search",
+    
+    "Nouveau Contenu": "New Content",
+    "Nouveau :": "New :",
+    "Chanson": "Song",
+    "Option": "Option",
+    "Envoyer": "Send",
+    
+    "Titre de la musique": "Music Title",
+    "Fichier de la musique": "Music File",
+    "Photo de la musique": "Music Photo",
+    "Uploader": "Upload",
+    "Chanteur de la musique": "Music Singer",
+    "Genre de la musique": "Music Genre",
+    
+    "Nom du chanteur": "Singer's name",
+    "Photo du chanteur": "Singer's Photo",
+    "Genre du chanteur": "Singer's Genre",
+    
+    "Nom du genre": "Genre name",
+    "Illustration du genre": "Genre illustration",
+    
+    "Genre :": "Genre :",
+    
+    "": ""
 }

@@ -2,14 +2,14 @@
 
 @section('content')
                 <div id="accueil-section-news">
-                    <h2 id="accueil-section-news-titre" class="section-titre">{{ __('test')}}</h2>
+                    <h2 id="accueil-section-news-titre" class="section-titre">{{ __('Nouveautés')}}</h2>
                     <div id="accueil-section-news-contenu" class="section-contenu">
                         @foreach($news as $n)
                         <div class="section-contenu-choix" onclick="listenMusic('{{ $n->fichier }}', '{{ $n->chanteur->nom }}', '{{ $n->titre }}', '{{ $n->image }}');">
                             <img class="section-contenu-choix-image" src="{{ $n->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $n->titre }}</h4>
-                                <p class="section-contenu-choix-infos-desc">Nouvelle chanson</p>
+                                <p class="section-contenu-choix-infos-desc">{{ __('Nouvelle chanson') }}</p>
                             </div>
                         </div>
                         @endforeach
@@ -45,7 +45,7 @@
                 </div>
                 
                 <div id="accueil-section-genres">
-                    <h2 id="accueil-section-genres-titre" class="section-titre">Genres</h2>
+                    <h2 id="accueil-section-genres-titre" class="section-titre">{{ __('Genres') }}</h2>
                     <div id="accueil-section-genres-contenu" class="section-contenu">
                         @foreach($genres as $g)
                         <div class="section-contenu-choix" onclick="viewGenre('{{ $g->nom }}');">
@@ -107,7 +107,7 @@
                 </div>
                 
                 <div id="accueil-section-chanteurs">
-                    <h2 id="accueil-section-chanteurs-titre" class="section-titre">Chanteurs</h2>
+                    <h2 id="accueil-section-chanteurs-titre" class="section-titre">{{ __('Chanteurs') }}</h2>
                     <div id="accueil-section-chanteurs-contenu" class="section-contenu">
                         <?php
                         $i = 0;
@@ -183,7 +183,7 @@
                         if($i == 10){
                     ?>
                     <div id="accueil-section-chanteurs-plus">
-                        <a id="accueil-section-chanteurs-plus-lien" href="/chanteurs#all" >Voir tous les chanteurs</a>
+                        <a id="accueil-section-chanteurs-plus-lien" href="/chanteurs#all" >{{ __('Voir tous les chanteurs') }}</a>
                     </div>
                     <?php   
                         }                    
@@ -191,7 +191,7 @@
                 </div>
                 
                 <div id="accueil-section-titres">
-                    <h2 id="accueil-section-titres-titre" class="section-titre">Titres</h2>
+                    <h2 id="accueil-section-titres-titre" class="section-titre">{{ __('Titres') }}</h2>
                     <div id="accueil-section-titres-contenu" class="section-contenu">
                         <?php
                         $j = 0;
@@ -201,7 +201,7 @@
                             <img class="section-contenu-choix-image" src="{{ $s->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $s->titre }}</h4>
-                                <p class="section-contenu-choix-infos-desc">de {{$s->chanteur->nom}}</p>
+                                <p class="section-contenu-choix-infos-desc">{{ __('de') }} {{$s->chanteur->nom}}</p>
                             </div>
                         </div>
                         <?php
@@ -277,7 +277,7 @@
                         if($j == 10){
                     ?>
                     <div id="accueil-section-titres-plus">
-                        <a id="accueil-section-titres-plus-lien" href="/titres#all" >Voir tous les titres</a>
+                        <a id="accueil-section-titres-plus-lien" href="/titres#all" >{{ __('Voir tous les titres') }}</a>
                     </div>
                     <?php
                         }
@@ -286,7 +286,7 @@
                 
                 @auth
                 <div id="accueil-section-favoris">
-                    <h2 id="accueil-section-favoris-titre" class="section-titre">Favoris</h2>
+                    <h2 id="accueil-section-favoris-titre" class="section-titre">{{ __('Favoris') }}</h2>
                     <div id="accueil-section-favoris-contenu" class="section-contenu">
                         <?php
                         $k = 0;
@@ -296,7 +296,7 @@
                             <img class="section-contenu-choix-image" src="{{ $f->titre->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $f->titre->titre }}</h4>
-                                <p class="section-contenu-choix-infos-desc">de {{ $f->titre->chanteur->nom }}</p>
+                                <p class="section-contenu-choix-infos-desc">{{ __('de') }} {{ $f->titre->chanteur->nom }}</p>
                             </div>
                         </div>
                         <?php
@@ -309,12 +309,12 @@
                         if($k == 10){
                     ?>
                     <div id="accueil-section-favoris-plus">
-                        <a id="accueil-section-favoris-plus-lien" href="/favoris" >Voir tous mes favoris</a>
+                        <a id="accueil-section-favoris-plus-lien" href="/favoris" >{{ __('Voir tous mes favoris') }}</a>
                     </div>
                     <?php
                         }elseif($k == 0){
                     ?>
-                    <p id="accueil-section-favoris-nothing">Vous n'avez, pour l'instant, aucun favoris dans votre liste</p>
+                    <p id="accueil-section-favoris-nothing">{{ __('Vous n\'avez, pour l\'instant, aucun favoris dans votre liste') }}</p>
                     <?php
                         }
                     ?>

@@ -3,7 +3,7 @@
 @section('content')
                 <div id="chanteur-single-section">
                     <h2 id="chanteur-single-section-title">{{ $chanteur->nom }}</h2>
-                    <p id="chanteur-single-section-genre"><span>Genre :</span><a href="/genres#{{ str_replace('-', '', strtolower($chanteur->genre->nom)) }}" id="lien-genre"> {{ $chanteur->genre->nom }}</a></p>
+                    <p id="chanteur-single-section-genre"><span>{{ __('Genre :') }}</span><a href="/genres#{{ str_replace('-', '', strtolower($chanteur->genre->nom)) }}" id="lien-genre"> {{ $chanteur->genre->nom }}</a></p>
                     <div id="chanteur-single-section-contenu" class="section-contenu">
                         @foreach($songs as $s)
                         @if($s->id_chanteur == $chanteur->id)

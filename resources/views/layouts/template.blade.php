@@ -28,8 +28,8 @@
             <div id="menu">
                 <nav>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/genres">Genres</a>
+                        <li><a href="/">{{ __('Accueil') }}</a></li>
+                        <li><a href="/genres">{{ __('Genres') }}</a>
                             <ul>
                                 <?php
                                 use App\Models\Genre;
@@ -50,26 +50,26 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li><a href="/chanteurs">Chanteurs</a>
+                        <li><a href="/chanteurs">{{ __('Chanteurs') }}</a>
                             <ul>
-                                <li><a href="/chanteurs#news">Nouveautées</a></li>
-                                <li><a href="/chanteurs#popular">Les plus populaires</a></li>
-                                <li><a href="/chanteurs#bestrated">Les mieux notés</a></li>
-                                <li><a href="/chanteurs#all">Tous les chanteurs</a></li>
+                                <li><a href="/chanteurs#news">{{ __('Nouveautés') }}</a></li>
+                                <li><a href="/chanteurs#popular">{{ __('Les plus populaires') }}</a></li>
+                                <li><a href="/chanteurs#bestrated">{{ __('Les mieux notés') }}</a></li>
+                                <li><a href="/chanteurs#all">{{ __('Tous les chanteurs') }}</a></li>
                             </ul>
                         </li>
-                        <li><a href="/titres">Titres</a>
+                        <li><a href="/titres">{{ __('Titres') }}</a>
                             <ul>
-                                <li><a href="/titres#news">Nouveautées</a></li>
-                                <li><a href="/titres#popular">Les plus populaires</a></li>
-                                <li><a href="/titres#bestrated">Les mieux notés</a></li>
-                                <li><a href="/titres#all">Tous les titres</a></li>
+                                <li><a href="/titres#news">{{ __('Nouveautées') }}</a></li>
+                                <li><a href="/titres#popular">{{ __('Les plus populaires') }}</a></li>
+                                <li><a href="/titres#bestrated">{{ __('Les mieux notés') }}</a></li>
+                                <li><a href="/titres#all">{{ __('Tous les titres') }}</a></li>
                             </ul>
                         </li>
                         @auth
-                        <li><a href="/favoris">Favoris</a></li>
+                        <li><a href="/favoris">{{ __('Favoris') }}</a></li>
                         @if(Auth::user()->admin == true)
-                        <li><a href="/addcontenu">Ajouter</a></li>
+                        <li><a href="/addcontenu">{{ __('Ajouter') }}</a></li>
                         @endif
                         @endauth
                     </ul>
@@ -80,7 +80,7 @@
         <div id="main-contenu">
             <header id="header">
                 <div id="form-search">
-                    <input id="search-bar" name="search" type="search" placeholder="Rechercher..." onkeyup="runSearch(this.value);" />
+                    <input id="search-bar" name="search" type="search" placeholder="{{ __('Rechercher...') }}" onkeyup="runSearch(this.value);" />
                 </div>
                 <div id="identification-lang">
                         @guest
@@ -128,8 +128,8 @@
                 <div id="music-infos">
                     <img id="music-infos-image" src="/img/icon_rhythms.png" alt="" />
                     <div id="music-infos-piste">
-                        <h3 id="music-infos-piste-titre">Titre</h3>
-                        <p id="music-infos-piste-chanteur">Chanteur</p>
+                        <h3 id="music-infos-piste-titre">{{ __('Titre') }}</h3>
+                        <p id="music-infos-piste-chanteur">{{ __('Chanteur') }}</p>
                     </div>
                 </div>
                 <div id="music-lecteur">

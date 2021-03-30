@@ -8,7 +8,7 @@
                 <div id="inscription-section-contenu">
                     <form id="formulaire-inscription" method="POST" action="{{ route('register') }}">
                         @csrf
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nom">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="{{ __('Nom') }}">
 
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -16,7 +16,7 @@
                                 </span>
                             @enderror
                         
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Adresse e-mail">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('Adresse e-mail') }}">
 
                             @error('email')
                                 <span class="invalid-feedback" role="alert">

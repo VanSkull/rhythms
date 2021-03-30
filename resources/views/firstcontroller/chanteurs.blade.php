@@ -2,9 +2,9 @@
 
 @section('content')
                 <div id="chanteurs-section">
-                    <h2 id="chanteurs-section-title">Chanteurs</h2>
+                    <h2 id="chanteurs-section-title">{{ __('Chanteurs') }}</h2>
                     <div id="news" class="chanteurs-section-type">
-                        <h3 class="chanteurs-section-type-titre">Nouveautées</h3>
+                        <h3 class="chanteurs-section-type-titre">{{ __('Nouveautées') }}</h3>
                         
                         <div class="chanteurs-section-all" class="section-contenu">
                             @foreach($newsChanteurs as $nC)
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div id="popular" class="chanteurs-section-type">
-                        <h3 class="chanteurs-section-type-titre">Les plus populaires</h3>
+                        <h3 class="chanteurs-section-type-titre">{{ __('Les plus populaires') }}</h3>
                         
                         <div class="chanteurs-section-all" class="section-contenu">
                             @foreach($popularChanteurs as $pC)
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div id="bestrated" class="chanteurs-section-type">
-                        <h3 class="chanteurs-section-type-titre">Les mieux notés</h3>
+                        <h3 class="chanteurs-section-type-titre">{{ __('Les mieux notés') }}</h3>
                         
                         <div class="chanteurs-section-all" class="section-contenu">
                             @foreach($ratedChanteurs as $rC)
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div id="all" class="chanteurs-section-type">
-                        <h3 class="chanteurs-section-type-titre">Tous les chanteur</h3>
+                        <h3 class="chanteurs-section-type-titre">{{ __('Tous les chanteurs') }}</h3>
                         
                         <div class="chanteurs-section-all" class="section-contenu">
                             @foreach($chanteurs as $c)
