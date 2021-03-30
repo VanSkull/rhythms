@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ App::getLocale() }}">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RHYTHMS - Toutes vos musiques à un seul endroit</title>
+        <title>RHYTHMS - {{ __('Toutes vos musiques à un seul endroit') }}</title>
         
         <meta name="author" content="Valentin Vanhaecke, Lucie Mayeur" />
         <meta name="description" content="Rhythms, votre plateforme de streaming de musique préférée. Découvrez des milliers d'artistes, de chanteurs, de genres musicaux avec un accès illimité à tout moment." />
@@ -109,9 +109,14 @@
                     </div>-->
                     <div id="lang-select">
                         <form method="post" action="#">
-                            <select name="langue" id="langue">
+                            <select name="langue" id="langue" onchange="changeLang(this.value);">
+                                @if(App::isLocale('en'))
+                                <option value="fr">FR</option>
+                                <option value="en" selected>EN</option>
+                                @else
                                 <option value="fr" selected>FR</option>
                                 <option value="en">EN</option>
+                                @endif
                             </select>
                         </form>
                     </div>

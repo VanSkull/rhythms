@@ -10,6 +10,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
 
 class FirstController extends Controller
 {
@@ -160,5 +161,14 @@ class FirstController extends Controller
             abort(404);
         Auth::user()->favSong()->toggle($id);
         return back();
+    }
+    
+    public function lang($lg){
+        if(!in_array($lg, ['fr', 'en'])) {
+            abort(400);
+        }
+        App::setLocale($lg);
+        
+        return redirect('/');
     }
 }

@@ -26,4 +26,6 @@ Route::post('/addcontenu/genre', [FirstController::class, 'store_genre'])->middl
 
 Route::get('/addfav/{id}', [FirstController::class, 'add_fav'])->middleware('auth')->where('id', '[0-9]+');
 
+Route::get('/lang/{lg}', [FirstController::class, 'lang']);
+
 Auth::routes();

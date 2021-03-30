@@ -26,6 +26,10 @@ function viewGenre(nom){
     }      
 }
 
+function changeLang(lang){
+    window.location.href = "/lang/" + lang; 
+}
+
 function listenMusic(file, chanteurName, songName, songImage){
     let image = document.getElementById("music-infos-image");
     let chansonTitre = document.getElementById("music-infos-piste-titre");
