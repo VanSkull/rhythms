@@ -5,7 +5,7 @@
                     <h2 id="accueil-section-news-titre" class="section-titre">Nouveautés</h2>
                     <div id="accueil-section-news-contenu" class="section-contenu">
                         @foreach($news as $n)
-                        <div class="section-contenu-choix">
+                        <div class="section-contenu-choix" onclick="listenMusic('{{ $n->fichier }}', '{{ $n->chanteur->nom }}', '{{ $n->titre }}', '{{ $n->image }}');">
                             <img class="section-contenu-choix-image" src="{{ $n->image }}" alt="" />
                             <div class="section-contenu-choix-infos">
                                 <h4 class="section-contenu-choix-infos-titre">{{ $n->titre }}</h4>
