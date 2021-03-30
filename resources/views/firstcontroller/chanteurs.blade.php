@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div id="bestrated" class="chanteurs-section-type">
-                        <h3 class="chanteurs-section-type-titre">Les mieux notés</h3>
+                        <h3 class="chanteurs-section-type-titre">Les mieu notés</h3>
                         
                         <div class="chanteurs-section-all" class="section-contenu">
                             @foreach($ratedChanteurs as $rC)
