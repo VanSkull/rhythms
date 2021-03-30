@@ -44,6 +44,6 @@ class User extends Authenticatable
     
     
     public function favSong(){
-        return $this->belongsToMany("App\Models\User", "favoris", "id_titre", "id_user");
+        return $this->belongsToMany("App\Models\User", "favoris", "id_user", "id_titre");
     }
 }
