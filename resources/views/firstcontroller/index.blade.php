@@ -2,7 +2,7 @@
 
 @section('content')
                 <div id="accueil-section-news">
-                    <h2 id="accueil-section-news-titre" class="section-titre">Nouveautés</h2>
+                    <h2 id="accueil-section-news-titre" class="section-titre">{{ __('test')}}</h2>
                     <div id="accueil-section-news-contenu" class="section-contenu">
                         @foreach($news as $n)
                         <div class="section-contenu-choix" onclick="listenMusic('{{ $n->fichier }}', '{{ $n->chanteur->nom }}', '{{ $n->titre }}', '{{ $n->image }}');">
